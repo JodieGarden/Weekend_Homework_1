@@ -1,5 +1,5 @@
 def pet_shop_name (pet_shop)
-  return pet_shop [:name]
+  return pet_shop[:name]
 end
 
 def total_cash (pet_shop)
@@ -24,8 +24,25 @@ def stock_count (pet_shop)
   return pet_shop[:pets].length
 end
 
-def all_pets_by_breed_found (pet_shop, pets)
-  return pet_shop [:new_pet][:breed]
-
-
+def pets_by_breed (pet_shop,breed)
+  output = []
+  for pet in pet_shop[:pets]
+    if pet[:breed] == breed
+      output.push(pet)
+    end
+  end
+  return output
 end
+
+# def pet_by_name (pet_shop,pet_name)
+#   output = []
+#   for pet in pet_shop[:pets]
+#     if pet[:breed] == breed
+#       output.push(pet)
+#     end
+#   end
+#   return output
+# end
+
+
+
