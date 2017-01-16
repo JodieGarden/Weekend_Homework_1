@@ -34,15 +34,44 @@ def pets_by_breed (pet_shop,breed)
   return output
 end
 
-# def pet_by_name (pet_shop,pet_name)
-#   output = []
-#   for pet in pet_shop[:pets]
-#     if pet[:breed] == breed
-#       output.push(pet)
-#     end
+def find_pet_by_name (pet_shop,name)
+  
+  for pet in pet_shop[:pets]
+    if pet[:name] == name
+     return pet
+    end
+  end
+return nil
+end
+
+# def remove_pet_by_name (pet_shop,name)
+
+# for pet in pet_shop[:pets]
+#   if pet[:name] != name
+#     return pet
 #   end
-#   return output
+# end
 # end
 
 
+# def add_pet_to_stock (pet_shop,new_pet)
+#   return[:pet_shop].push"#{[:new_pet]}"
 
+
+
+# end
+def customer_pet_count (customers)
+  return customers [:pets].length
+
+end
+
+def remove_pet_by_name (pet_shop)
+  return pet_shop[:pets].delete("Arthur")
+
+end
+
+def add_pet_to_stock (pet_shop, new_pet)
+  pet_shop[:new_pet]
+return pet_shop.delete_if{ }
+
+end
